@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # portfolio2020
 
 ## Build Setup
@@ -19,6 +18,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-=======
-# portfolio2020
->>>>>>> 5c816be785fd19e59feaecaade25a56323c52940
