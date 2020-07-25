@@ -1,0 +1,17 @@
+.container-full-width {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  border: 3px solid $border-dark;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
