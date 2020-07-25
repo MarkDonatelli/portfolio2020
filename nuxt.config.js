@@ -24,12 +24,19 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600&family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap',
+      },
+    ],
   },
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/style.scss'],
+  css: ['@/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -51,12 +58,16 @@ export default {
    ** Nuxt.js modules
    */
   modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: [
+      '~/assets/scss/variables.scss',
+      '~/assets/scss/colors.scss',
+      '~/assets/scss/fonts.scss',
+    ],
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
-  styleResources: {
-    scss: ['~/assets/scss/variables.scss'],
-  },
 }
