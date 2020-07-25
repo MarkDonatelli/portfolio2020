@@ -1,0 +1,25 @@
+// Google Fonts
+
+// Font Variables
+$titillium: 'Titillium Web', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+// Styles
+body {
+  font-family: $montserrat;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $titillium;
+  font-weight: normal;
+}
+
+a {
+  font-family: $titillium;
+  font-weight: normal;
+}
