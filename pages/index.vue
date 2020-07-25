@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        portfolio2020
+        Marks Vue Portfolio
       </h1>
       <div class="links">
         <a
