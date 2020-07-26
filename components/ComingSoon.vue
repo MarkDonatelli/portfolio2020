@@ -90,8 +90,6 @@ export default {
     content: '';
 
     border-radius: 5px;
-    background: linear-gradient(to bottom right, #1cf196 0%, #36a6bf 100%);
-    background: linear-gradient(to bottom right, #eb3349 0%, #f45c43 100%);
     background: linear-gradient(to bottom right, #43cea2 0%, #185a9d 100%);
   }
 
