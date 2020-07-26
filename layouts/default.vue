@@ -11,4 +11,8 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+body {
+  height: 100%;
+}
 </style>
