@@ -30,6 +30,10 @@ export default {}
     transform: translate(-50%, -50%) rotate(30deg) skew(30deg);
 
     background: #f5f5f5;
+
+    @media only screen and (max-width: 992px) {
+      height: 50%;
+    }
   }
 }
 </style>
