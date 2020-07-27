@@ -129,22 +129,20 @@ export default {
 
   width: 100%;
   max-width: 315px;
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   padding: 0 15px;
 
+  @media only screen and (max-width: 576px) {
+    max-width: 215px;
+  }
+
   a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 70px;
-    height: 70px;
-
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 70px;
+    // height: 70px;
     cursor: pointer;
-
-    border-radius: 50%;
-    box-shadow: 0 25px 20px -20px rgba(67, 206, 162, 0.3),
-      0 0 15px rgba(24, 90, 157, 0.06);
 
     &:hover,
     :active,
@@ -168,7 +166,11 @@ export default {
   }
 
   img {
-    max-width: 35px;
+    max-width: 45px;
+
+    @media only screen and (max-width: 576px) {
+      max-width: 30px;
+    }
   }
 }
 
