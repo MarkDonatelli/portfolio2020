@@ -227,26 +227,30 @@ export default {
       },
     })
 
-    gsap.utils.toArray('.grid-row').forEach((item) => {
-      gsap.fromTo(
-        item,
-        {
-          autoAlpha: 0,
-          y: 35,
-        },
-        {
-          scrollTrigger: {
-            trigger: item,
+    ScrollTrigger.matchMedia({
+      '(min-width: 769px)'() {
+        gsap.utils.toArray('.grid-row').forEach((item) => {
+          gsap.fromTo(
+            item,
+            {
+              autoAlpha: 0,
+              y: 35,
+            },
+            {
+              scrollTrigger: {
+                trigger: item,
 
-            once: true,
-          },
-          duration: 1,
-          autoAlpha: 1,
-          y: 0,
-          delay: 0.2,
-          ease: Power2.easeOut,
-        }
-      )
+                once: true,
+              },
+              duration: 1,
+              autoAlpha: 1,
+              y: 0,
+              delay: 0.2,
+              ease: Power2.easeOut,
+            }
+          )
+        })
+      },
     })
 
     const tl = gsap.timeline({ paused: true })
