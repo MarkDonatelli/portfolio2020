@@ -299,6 +299,7 @@ export default {
 
 .showcase--grid {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 
