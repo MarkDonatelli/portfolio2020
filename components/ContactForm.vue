@@ -430,4 +430,11 @@ label {
     transform: translateX(0);
   }
 }
+
+textarea,
+input[type='text'] {
+  border-radius: 0;
+
+  -webkit-appearance: none;
+}
 </style>
