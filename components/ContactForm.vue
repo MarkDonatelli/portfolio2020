@@ -311,11 +311,12 @@ form {
 
   cursor: pointer;
 
-  border: 1px solid $black;
+  border: 2px solid $black;
   outline: 0;
 
   font-family: $raleway;
   font-size: 14px;
+  font-weight: 600;
 
   &::placeholder {
     color: $black;
@@ -368,6 +369,8 @@ input[type='text'] {
 
   margin-top: 15px;
   margin-bottom: 20px;
+
+  font-weight: 600;
 }
 .floating-input,
 .floating-select {
@@ -378,11 +381,12 @@ input[type='text'] {
   padding: 4px 4px;
 
   border: none;
-  border-bottom: solid 1px $black;
+  border-bottom: solid 2px $black;
   background-color: transparent;
 
   font-family: $raleway;
   font-size: 14px;
+  font-weight: 600;
 }
 
 label {
