@@ -485,20 +485,4 @@ export default {
     opacity: 1;
   }
 }
-
-//gsap testing
-.cross-1 {
-  position: absolute;
-  top: -130px;
-  left: 100%;
-
-  width: 180px;
-  height: 180px;
-}
-
-@media screen and (max-width: 900px) {
-  .cross-1 {
-    left: 0;
-  }
-}
 </style>

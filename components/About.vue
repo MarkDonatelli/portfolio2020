@@ -93,7 +93,7 @@ export default {
 
   @media (max-width: 768px) {
     margin-top: 35px;
-    padding-top: 57px;
+    padding-top: 35px;
     padding-bottom: 30px;
   }
 }

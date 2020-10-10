@@ -3,25 +3,6 @@ html {
   overflow-x: hidden;
 }
 
-//cursor
-#cursor-custom {
-  position: fixed;
-  z-index: 2;
-
-  width: 15px;
-  height: 15px;
-
-  transition: transform 0.3s ease;
-  pointer-events: none;
-
-  border-radius: 50%;
-  background: $black;
-
-  filter: hue-rotate(100%);
-  will-change: top, left;
-  mix-blend-mode: difference;
-}
-
 .container-full-width {
   width: 100%;
   margin-right: auto;
