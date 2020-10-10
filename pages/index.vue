@@ -226,11 +226,15 @@ export default {
   z-index: 999;
 
   display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  height: 100vh;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
 
   background-color: $white;
 
