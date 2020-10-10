@@ -114,13 +114,17 @@
               </form>
             </div>
 
-            <div v-else key="2" class="form-content shadow">
+            <div
+              v-else
+              key="2"
+              class="form-content form-content--success shadow"
+            >
               <img
                 src="../assets/img/mail-sent.svg"
                 class="img-responsive img-message-success"
               />
-              <h1 class="title title--section">
-                Message Sent Successfully!
+              <h1 class="title title--section title-block--contact">
+                Success!
                 <span class="underline"></span>
               </h1>
             </div>
@@ -271,6 +275,12 @@ textarea {
   }
 }
 
+.form-content--success {
+  .title-block--contact {
+    margin-top: 25px;
+  }
+}
+
 form {
   width: 100%;
   margin-top: 30px;
@@ -326,6 +336,14 @@ button.btn-primary {
   color: $red;
 
   font-size: 12px;
+}
+
+//global ios  issue
+textarea,
+input[type='text'] {
+  border-radius: 0;
+
+  -webkit-appearance: none;
 }
 
 //fade out fade in form states on successful submit
@@ -429,12 +447,5 @@ label {
   100% {
     transform: translateX(0);
   }
-}
-
-textarea,
-input[type='text'] {
-  border-radius: 0;
-
-  -webkit-appearance: none;
 }
 </style>
