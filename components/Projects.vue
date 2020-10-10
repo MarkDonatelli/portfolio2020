@@ -133,7 +133,7 @@
             <!--project - Kynmobi -->
             <div class="grid-row grid-row--reverse-mobile">
               <div class="grid-item grid-item--left project-content">
-                <h2 class="project-title">Kynmobi</h2>
+                <h2 class="project-title project-title--kynmobi">Kynmobi</h2>
                 <div class="project-details">
                   <h3>Role</h3>
                   <p>Front End Development</p>
@@ -413,6 +413,13 @@ export default {
       background-color: $red;
     }
   }
+
+  .project-title--kynmobi::after {
+    @media all and(max-width:863px) {
+      bottom: -7px;
+    }
+  }
+
   .project-details {
     h3 {
       color: $black;

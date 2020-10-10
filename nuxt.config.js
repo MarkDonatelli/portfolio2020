@@ -72,6 +72,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     'nuxt-gsap',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
