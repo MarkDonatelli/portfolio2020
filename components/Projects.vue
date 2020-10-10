@@ -315,6 +315,7 @@ export default {
   justify-content: space-around;
 
   width: 100%;
+  height: auto;
   margin-bottom: 15px;
 
   @media all and(max-width:768px) {
