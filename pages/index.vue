@@ -563,7 +563,7 @@ nav {
     flex-direction: column;
     justify-content: center;
 
-    width: 200px;
+    width: 100%;
     height: 200px;
     height: auto;
     margin: 5px 0 25px 0;
