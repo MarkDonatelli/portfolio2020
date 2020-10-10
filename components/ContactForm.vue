@@ -127,6 +127,7 @@
                 Success!
                 <span class="underline"></span>
               </h1>
+              <p>Thank you for contacting me! I will be in touch shortly :)</p>
             </div>
           </transition>
         </div>
