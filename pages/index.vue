@@ -671,7 +671,7 @@ nav {
 .square-one,
 .square-two {
   position: absolute;
-  top: 0;
+  top: -40px;
   left: 0;
 
   width: 20px;
