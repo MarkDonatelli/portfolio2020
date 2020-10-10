@@ -30,23 +30,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      title: 'Mark Donatelli - Coming Soon',
-    }
-  },
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Mark Donatelli - Coming Soon',
-        },
-      ],
-    }
-  },
+  data() {},
+  head() {},
 }
 </script>
 
@@ -112,7 +97,7 @@ export default {
 
     color: $black;
 
-    font-family: $titillium;
+    font-family: $poppins;
     font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
     font-weight: 700;
 
@@ -137,11 +122,6 @@ export default {
   }
 
   a {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // width: 70px;
-    // height: 70px;
     cursor: pointer;
 
     &:hover,

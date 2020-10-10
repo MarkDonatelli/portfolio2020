@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="edfeb08d-cf64-4dc3-bad9-eda805eddb33"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 580 575"
+	 style="enable-background:new 0 0 580 575;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F4F4F4;}
+	.st1{opacity:0.83;fill:#DDDDDD;}
+	.st2{opacity:0.21;fill:#F0473E;enable-background:new    ;}
+	.st3{opacity:0.61;}
+	.st4{fill:#F0473E;}
+</style>
+<g>
+	<polygon class="st0" points="453,30.5 57,30.5 57,160.5 72,160.5 72,194.5 106,160.5 453,160.5 	"/>
+	<polygon class="st0" points="453,380.5 57,380.5 57,510.5 72,510.5 72,544.5 106,510.5 453,510.5 	"/>
+	<polygon class="st1" points="127,206.5 523,206.5 523,336.5 508,336.5 508,370.5 474,336.5 127,336.5 	"/>
+	<rect x="103" y="52" class="st2" width="304" height="12"/>
+	<rect x="103" y="75" class="st2" width="152" height="12"/>
+	<circle class="st2" cx="120" cy="122" r="17"/>
+	<g class="st3">
+		<rect x="163" y="226" class="st4" width="304" height="12"/>
+		<rect x="163" y="249" class="st4" width="152" height="12"/>
+		<circle class="st4" cx="180" cy="296" r="17"/>
+	</g>
+	<rect x="103" y="402" class="st2" width="304" height="12"/>
+	<rect x="103" y="425" class="st2" width="152" height="12"/>
+	<circle class="st2" cx="120" cy="472" r="17"/>
+</g>
+</svg>

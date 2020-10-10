@@ -25,23 +25,33 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,600&family=Titillium+Web:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap',
+          'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Raleway:wght@400;700;900&display=swap',
       },
     ],
   },
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/main.scss'],
+  css: [
+    '@/assets/scss/main.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js',
+    '~/plugins/scroll-trigger.js',
+    '~/plugins/firestore.js',
+    { src: '~/plugins/vuelidate.js', ssr: true },
+  ],
+
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -53,6 +63,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
+    'nuxt-gsap',
   ],
   /*
    ** Nuxt.js modules
@@ -63,6 +74,7 @@ export default {
       '~/assets/scss/variables.scss',
       '~/assets/scss/colors.scss',
       '~/assets/scss/fonts.scss',
+      '~/assets/scss/mixins.scss',
     ],
   },
   /*
