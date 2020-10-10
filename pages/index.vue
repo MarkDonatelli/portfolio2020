@@ -564,8 +564,8 @@ nav {
     justify-content: center;
 
     width: 100%;
-    height: 100px;
-    margin: 20px 0 35px 0;
+    height: 75px;
+    margin: 20px 0 30px 0;
     padding: 10px;
 
     transition: 200ms all linear;
