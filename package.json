@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "@nuxtjs/dotenv": "^1.4.1",
     "firebase": "^7.21.0",
+    "node-forge": "^0.10.0",
     "nuxt": "^2.14.3",
     "nuxt-gsap": "^0.1.4",
     "vue-parallaxy": "^1.1.1",
