@@ -312,6 +312,7 @@ export default {
 
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
   width: 100%;
   margin-bottom: 15px;
