@@ -311,6 +311,7 @@ export default {
   position: relative;
 
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 
   width: 100%;
@@ -377,12 +378,6 @@ export default {
     }
   }
 }
-
-// .grid-item--media {
-//   @media all and(max-width:768px) {
-//     max-width: 75%;
-//   }
-// }
 
 .l-project {
   position: relative;
