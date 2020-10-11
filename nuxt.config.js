@@ -54,6 +54,7 @@ export default {
     '~/plugins/firestore.js',
     '~/plugins/scroll-to.js',
     { src: '~/plugins/vuelidate.js', ssr: true },
+    { src: '~plugins/ga.js', mode: 'client' },
   ],
 
   /*
