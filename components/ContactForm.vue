@@ -238,11 +238,6 @@ textarea {
   span.underline {
     bottom: 15%;
   }
-
-  p {
-    font-family: $poppins;
-    font-weight: bold;
-  }
 }
 
 .title--section {
@@ -322,10 +317,11 @@ form {
   font-weight: 600;
 
   &::placeholder {
-    color: $black;
+    color: $grey-dark--variant;
 
     font-family: $raleway;
     font-size: 14px;
+    font-weight: normal;
   }
 }
 
@@ -402,8 +398,11 @@ label {
   transition: all 0.1s ease-in-out;
   pointer-events: none;
 
+  color: $grey-dark--variant;
+
   font-family: $raleway;
   font-size: 14px;
+  font-weight: normal;
 }
 
 .floating-input:focus ~ label,
