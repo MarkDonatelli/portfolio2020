@@ -602,8 +602,8 @@ nav {
       &::after {
         position: absolute;
 
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
 
         content: '';
         transition: 200ms all linear;
@@ -614,8 +614,8 @@ nav {
         @include fluidType(bottom, 320px, 990px, 22px, 35px);
 
         @media all and(max-width:550px) {
-          width: 13px;
-          height: 13px;
+          width: 10px;
+          height: 10px;
         }
       }
     }
