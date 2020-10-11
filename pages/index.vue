@@ -86,20 +86,32 @@
           </div>
           <div class="lg-title-wrap lg-title-wrap--mobile mobile-nav-boxes">
             <a v-scroll-to="'#title-block--projects'" class="nav-box" href="#">
-              <font-awesome-icon :icon="['fas', 'project-diagram']" />
-              Projects
+              <div class="btn-inner">
+                <h2>Projects</h2>
+                <span class="info">Check out my latest projects.</span>
+              </div>
+              <span class="number">01</span>
             </a>
             <a v-scroll-to="'#techs'" class="nav-box" href="#">
-              <font-awesome-icon :icon="['fas', 'laptop-code']" />
-              Technologies
+              <div class="btn-inner">
+                <h2>Technologies</h2>
+                <span class="info">Technologies I use.</span>
+              </div>
+              <span class="number">02</span>
             </a>
             <a v-scroll-to="'#about'" class="nav-box" href="#">
-              <font-awesome-icon :icon="['fas', 'user']" />
-              About
+              <div class="btn-inner">
+                <h2>About</h2>
+                <span class="info">Attributes.</span>
+              </div>
+              <span class="number">03</span>
             </a>
             <a v-scroll-to="'#sayHelloScrollTo'" class="nav-box" href="#">
-              <font-awesome-icon :icon="['fas', 'envelope']" />
-              Contact
+              <div class="btn-inner">
+                <h2>Contact</h2>
+                <span class="info">Have a question? Contact me here.</span>
+              </div>
+              <span class="number">04</span>
             </a>
           </div>
         </div>
@@ -168,6 +180,14 @@ export default {
         '-=0.5'
       )
       .to('.underline', 0.8, { width: '100%', ease: Expo.easeInOut }, '-=0.7')
+
+    const fedText = gsap.timeline({ yoyo: false })
+    fedText.fromTo(
+      '.sub-title',
+      0.8,
+      { autoAlpha: 0, y: '2%' },
+      { delay: 3, autoAlpha: 1, y: '0', ease: Power2.easeOut }
+    )
   },
   head() {
     return {
@@ -535,11 +555,16 @@ nav {
   justify-content: space-between;
 
   width: 100%;
-  margin-top: 25px;
-  padding: 0 15px;
+  margin-top: 35px;
 
   @media all and(min-width:992px) {
     display: none;
+  }
+
+  span.info {
+    font-family: $raleway;
+
+    @include fluidType(font-size, 320px, 990px, 15px, 18px);
   }
 
   .nav-box {
@@ -550,42 +575,58 @@ nav {
     justify-content: center;
 
     width: 100%;
-    height: 75px;
-    margin: 20px 0 30px 0;
-    padding: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
 
     transition: 200ms all linear;
     text-decoration: none;
 
     color: $black;
-    border: 2px solid $black;
+    border-top: 2px solid $black;
     background-color: $white;
 
-    font-size: 16px;
-    font-weight: bold;
+    @include fluidType(padding-top, 320px, 990px, 30px, 40px);
+    @include fluidType(padding-bottom, 320px, 990px, 30px, 40px);
 
-    &::before {
+    &:last-child {
+      border-bottom: 2px solid $black;
+    }
+
+    h2 {
+      position: relative;
+
+      padding-bottom: 10px;
+
+      @include fluidType(font-size, 320px, 990px, 30px, 65px);
+
+      &::after {
+        position: absolute;
+
+        content: '';
+        transition: 200ms all linear;
+
+        border-radius: 50%;
+        background-color: $red;
+
+        @include fluidType(width, 320px, 990px, 9px, 17px);
+        @include fluidType(height, 320px, 990px, 9px, 17px);
+        @include fluidType(bottom, 320px, 990px, 22px, 35px);
+      }
+    }
+
+    .number {
       position: absolute;
-      z-index: -1;
-      top: 7px;
-      left: -7px;
+      right: 15px;
 
-      width: 100%;
-      height: 100%;
-
-      content: '';
-      transition: 200ms all linear;
-
-      border: 2px solid $black;
+      @include fluidType(font-size, 320px, 990px, 35px, 95px);
     }
 
     &:hover {
       color: $white;
       background-color: $red;
 
-      &::before {
-        top: 0;
-        left: 0;
+      h2::after {
+        background-color: $white;
       }
     }
   }
