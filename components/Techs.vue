@@ -223,8 +223,8 @@ export default {
   .title {
     color: $black;
 
-    @include fluidType(font-size, 567px, 1300px, 35px, 65px);
-    @include fluidType(line-height, 567px, 1300px, 40px, 75px);
+    @include fluidType(font-size, 320px, 1300px, 28px, 65px);
+    @include fluidType(line-height, 320px, 1300px, 32px, 75px);
 
     @media (max-width: 550px) {
       br {

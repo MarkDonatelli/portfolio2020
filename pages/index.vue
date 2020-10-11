@@ -97,7 +97,7 @@
               <font-awesome-icon :icon="['fas', 'user']" />
               About
             </a>
-            <a v-scroll-to="'#contact'" class="nav-box" href="#">
+            <a v-scroll-to="'#sayHelloScrollTo'" class="nav-box" href="#">
               <font-awesome-icon :icon="['fas', 'envelope']" />
               Contact
             </a>

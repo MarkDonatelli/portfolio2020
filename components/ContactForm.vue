@@ -11,7 +11,10 @@
             >
               <div id="sayHello" class="title-block title-block--contact">
                 <p class="hello">&#128075;</p>
-                <h1 class="title title--section title--underline">
+                <h1
+                  id="sayHelloScrollTo"
+                  class="title title--section title--underline"
+                >
                   Say Hello
                   <span class="underline"></span>
                 </h1>
