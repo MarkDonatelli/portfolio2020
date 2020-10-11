@@ -75,9 +75,9 @@
               </a>
               <p class="cta-p">OR</p>
               <a
+                v-scroll-to="'#title-block--projects'"
                 class="btn btn-primary"
-                href="#projects"
-                @click.prevent="scrollTo('title-block--projects')"
+                href="#"
               >
                 View Projects
                 <font-awesome-icon far icon="arrow-down" />
@@ -85,31 +85,19 @@
             </div>
           </div>
           <div class="lg-title-wrap lg-title-wrap--mobile mobile-nav-boxes">
-            <a
-              class="nav-box"
-              href="#projects"
-              @click.prevent="scrollTo('title-block--projects')"
-            >
+            <a v-scroll-to="'#title-block--projects'" class="nav-box" href="#">
               <font-awesome-icon :icon="['fas', 'project-diagram']" />
               Projects
             </a>
-            <a
-              class="nav-box"
-              href="#technologies"
-              @click.prevent="scrollTo('techs')"
-            >
+            <a v-scroll-to="'#techs'" class="nav-box" href="#">
               <font-awesome-icon :icon="['fas', 'laptop-code']" />
               Technologies
             </a>
-            <a class="nav-box" href="#about" @click.prevent="scrollTo('about')">
+            <a v-scroll-to="'#about'" class="nav-box" href="#">
               <font-awesome-icon :icon="['fas', 'user']" />
               About
             </a>
-            <a
-              class="nav-box"
-              href="#contact"
-              @click.prevent="scrollTo('contact')"
-            >
+            <a v-scroll-to="'#contact'" class="nav-box" href="#">
               <font-awesome-icon :icon="['fas', 'envelope']" />
               Contact
             </a>
@@ -180,12 +168,6 @@ export default {
         '-=0.5'
       )
       .to('.underline', 0.8, { width: '100%', ease: Expo.easeInOut }, '-=0.7')
-  },
-  methods: {
-    scrollTo(id) {
-      const element = document.getElementById(id)
-      element.scrollIntoView({ behavior: 'smooth' })
-    },
   },
   head() {
     return {

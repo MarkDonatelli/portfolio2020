@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="container--form">
+  <div class="container--form">
     <div id="contact" class="contact-form">
       <div class="row row--form">
         <div class="col-form">
@@ -9,7 +9,7 @@
               key="1"
               class="form-content shadow"
             >
-              <div class="title-block title-block--contact">
+              <div id="sayHello" class="title-block title-block--contact">
                 <p class="hello">&#128075;</p>
                 <h1 class="title title--section title--underline">
                   Say Hello

@@ -57,6 +57,7 @@ export default {
     '~/plugins/fontawesome.js',
     '~/plugins/scroll-trigger.js',
     '~/plugins/firestore.js',
+    '~/plugins/scroll-to.js',
     { src: '~/plugins/vuelidate.js', ssr: true },
   ],
 
@@ -77,7 +78,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', 'vue-scrollto/nuxt'],
   styleResources: {
     scss: [
       '~/assets/scss/variables.scss',

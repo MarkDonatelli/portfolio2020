@@ -6,7 +6,7 @@
           <div class="highlight-wrap">
             <h2>Developer</h2>
             <span>
-              Team player,problem solver, open minded, disciplined, always
+              Team player, problem solver, open minded, disciplined, always
               learning
             </span>
           </div>
