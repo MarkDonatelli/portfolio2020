@@ -614,8 +614,8 @@ nav {
         @include fluidType(bottom, 320px, 990px, 22px, 35px);
 
         @media all and(max-width:550px) {
-          width: 10px;
-          height: 10px;
+          width: 9px;
+          height: 9px;
         }
       }
     }
