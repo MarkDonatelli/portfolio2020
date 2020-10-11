@@ -602,15 +602,21 @@ nav {
       &::after {
         position: absolute;
 
+        width: 15px;
+        height: 15px;
+
         content: '';
         transition: 200ms all linear;
 
         border-radius: 50%;
         background-color: $red;
 
-        @include fluidType(width, 320px, 990px, 9px, 17px);
-        @include fluidType(height, 320px, 990px, 9px, 17px);
         @include fluidType(bottom, 320px, 990px, 22px, 35px);
+
+        @media all and(max-width:550px) {
+          width: 13px;
+          height: 13px;
+        }
       }
     }
 

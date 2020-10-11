@@ -185,9 +185,7 @@
                 </div>
               </div>
               <div class="grid-item project-content">
-                <h2 class="project-title">
-                  Coming Soon!
-                </h2>
+                <h2 class="project-title">Coming Soon!</h2>
                 <div class="project-details pin">
                   <p>Currently building something awesome!</p>
                 </div>

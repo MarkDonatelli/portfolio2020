@@ -19,9 +19,7 @@
           </div>
           <div class="highlight-wrap">
             <h2>Designer</h2>
-            <span>
-              Beautiful UI layouts, color themes, and creativity
-            </span>
+            <p>Beautiful UI layouts, color themes, and creativity</p>
           </div>
           <div class="highlight-wrap">
             <h2>Experience</h2>
@@ -157,6 +155,13 @@ export default {
     }
 
     span {
+      font-family: $raleway;
+      font-weight: normal;
+
+      @include fluidType(font-size, 567px, 1400px, 16px, 18px);
+    }
+
+    p {
       font-family: $raleway;
       font-weight: normal;
 
