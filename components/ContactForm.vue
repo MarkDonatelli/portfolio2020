@@ -312,14 +312,14 @@ form {
   border: 2px solid $black;
   outline: 0;
 
-  font-family: $raleway;
+  font-family: $poppins;
   font-size: 14px;
   font-weight: 600;
 
   &::placeholder {
-    color: $grey-dark--variant;
+    color: $black;
 
-    font-family: $raleway;
+    font-family: $poppins;
     font-size: 14px;
     font-weight: normal;
   }
@@ -342,6 +342,7 @@ button.btn-primary {
 //global ios  issue
 textarea,
 input[type='text'] {
+  color: $black;
   border-radius: 0;
 
   -webkit-appearance: none;
@@ -383,7 +384,7 @@ input[type='text'] {
   border-bottom: solid 2px $black;
   background-color: transparent;
 
-  font-family: $raleway;
+  font-family: $poppins;
   font-size: 14px;
   font-weight: 600;
 }
@@ -398,9 +399,9 @@ label {
   transition: all 0.1s ease-in-out;
   pointer-events: none;
 
-  color: $grey-dark--variant;
+  color: $black;
 
-  font-family: $raleway;
+  font-family: $poppins;
   font-size: 14px;
   font-weight: normal;
 }

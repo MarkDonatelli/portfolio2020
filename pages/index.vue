@@ -562,7 +562,7 @@ nav {
   }
 
   span.info {
-    font-family: $raleway;
+    font-family: $poppins;
 
     @include fluidType(font-size, 320px, 990px, 15px, 18px);
   }

@@ -155,14 +155,14 @@ export default {
     }
 
     span {
-      font-family: $raleway;
+      font-family: $poppins;
       font-weight: normal;
 
       @include fluidType(font-size, 567px, 1400px, 16px, 18px);
     }
 
     p {
-      font-family: $raleway;
+      font-family: $poppins;
       font-weight: normal;
 
       @include fluidType(font-size, 567px, 1400px, 16px, 18px);
