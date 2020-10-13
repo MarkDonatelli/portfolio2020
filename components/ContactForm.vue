@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="container--form">
+  <div class="container--form">
     <div id="contact" class="contact-form">
       <div class="row row--form">
         <div class="col-form">
@@ -9,9 +9,12 @@
               key="1"
               class="form-content shadow"
             >
-              <div class="title-block title-block--contact">
+              <div id="sayHello" class="title-block title-block--contact">
                 <p class="hello">&#128075;</p>
-                <h1 class="title title--section title--underline">
+                <h1
+                  id="sayHelloScrollTo"
+                  class="title title--section title--underline"
+                >
                   Say Hello
                   <span class="underline"></span>
                 </h1>
@@ -114,15 +117,20 @@
               </form>
             </div>
 
-            <div v-else key="2" class="form-content shadow">
+            <div
+              v-else
+              key="2"
+              class="form-content form-content--success shadow"
+            >
               <img
                 src="../assets/img/mail-sent.svg"
                 class="img-responsive img-message-success"
               />
-              <h1 class="title title--section">
-                Message Sent Successfully!
+              <h1 class="title title--section title-block--contact">
+                Success!
                 <span class="underline"></span>
               </h1>
+              <p>Thank you for contacting me! I will be in touch shortly :)</p>
             </div>
           </transition>
         </div>
@@ -230,11 +238,6 @@ textarea {
   span.underline {
     bottom: 15%;
   }
-
-  p {
-    font-family: $poppins;
-    font-weight: bold;
-  }
 }
 
 .title--section {
@@ -271,6 +274,12 @@ textarea {
   }
 }
 
+.form-content--success {
+  .title-block--contact {
+    margin-top: 25px;
+  }
+}
+
 form {
   width: 100%;
   margin-top: 30px;
@@ -300,17 +309,19 @@ form {
 
   cursor: pointer;
 
-  border: 1px solid $black;
+  border: 2px solid $black;
   outline: 0;
 
-  font-family: $raleway;
+  font-family: $poppins;
   font-size: 14px;
+  font-weight: 600;
 
   &::placeholder {
     color: $black;
 
-    font-family: $raleway;
+    font-family: $poppins;
     font-size: 14px;
+    font-weight: normal;
   }
 }
 
@@ -326,6 +337,15 @@ button.btn-primary {
   color: $red;
 
   font-size: 12px;
+}
+
+//global ios  issue
+textarea,
+input[type='text'] {
+  color: $black;
+  border-radius: 0;
+
+  -webkit-appearance: none;
 }
 
 //fade out fade in form states on successful submit
@@ -349,6 +369,8 @@ button.btn-primary {
 
   margin-top: 15px;
   margin-bottom: 20px;
+
+  font-weight: 600;
 }
 .floating-input,
 .floating-select {
@@ -359,11 +381,12 @@ button.btn-primary {
   padding: 4px 4px;
 
   border: none;
-  border-bottom: solid 1px $black;
+  border-bottom: solid 2px $black;
   background-color: transparent;
 
-  font-family: $raleway;
+  font-family: $poppins;
   font-size: 14px;
+  font-weight: 600;
 }
 
 label {
@@ -376,8 +399,11 @@ label {
   transition: all 0.1s ease-in-out;
   pointer-events: none;
 
-  font-family: $raleway;
+  color: $black;
+
+  font-family: $poppins;
   font-size: 14px;
+  font-weight: normal;
 }
 
 .floating-input:focus ~ label,

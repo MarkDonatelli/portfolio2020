@@ -223,8 +223,13 @@ export default {
   .title {
     color: $black;
 
+<<<<<<< HEAD
     @include fluidType(font-size, 567px, 1300px, 35px, 65px);
     @include fluidType(line-height, 567px, 1300px, 40px, 75px);
+=======
+    @include fluidType(font-size, 320px, 1300px, 28px, 65px);
+    @include fluidType(line-height, 320px, 1300px, 32px, 75px);
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
 
     @media (max-width: 550px) {
       br {
@@ -284,7 +289,11 @@ span.underline {
   max-width: 130px;
 
   @media (max-width: 768px) {
+<<<<<<< HEAD
     max-width: 100px;
+=======
+    max-width: 85px;
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
   }
 }
 </style>

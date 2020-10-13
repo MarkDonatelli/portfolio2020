@@ -1,19 +1,6 @@
-//font sizes - for reference and future building
-
-// mark donatelli title     desktop 90 mobile 60
-
-//home header large         desktop 170 mobile 75
-
-//section title             desktop 115 mobile 75
-
-//project title             desktop 65  mobile 35
-
-//project p                 desktop 18  mobile 16
-
 // Font Variables
 $poppins: 'Poppins', sans-serif;
-$raleway: 'Raleway', sans-serif;
-$playfair: 'Playfair Display', serif;
+
 // Styles
 body {
   font-family: $poppins;
@@ -33,15 +20,7 @@ a {
 }
 
 p {
-  font-family: $raleway;
-}
-
-.font-playfair {
-  font-family: $playfair;
-}
-
-.font-raleway {
-  font-family: $playfair;
+  font-family: $poppins;
 }
 
 .font-poppins {

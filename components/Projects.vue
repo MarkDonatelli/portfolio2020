@@ -133,7 +133,7 @@
             <!--project - Kynmobi -->
             <div class="grid-row grid-row--reverse-mobile">
               <div class="grid-item grid-item--left project-content">
-                <h2 class="project-title">Kynmobi</h2>
+                <h2 class="project-title project-title--kynmobi">Kynmobi</h2>
                 <div class="project-details">
                   <h3>Role</h3>
                   <p>Front End Development</p>
@@ -297,6 +297,7 @@ export default {
 
 .showcase--grid {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
 
@@ -309,9 +310,11 @@ export default {
   position: relative;
 
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 
   width: 100%;
+  height: auto;
   margin-bottom: 15px;
 
   @media all and(max-width:768px) {
@@ -376,16 +379,11 @@ export default {
   }
 }
 
-// .grid-item--media {
-//   @media all and(max-width:768px) {
-//     max-width: 75%;
-//   }
-// }
-
 .l-project {
   position: relative;
 
   display: flex;
+  flex-direction: column;
 
   cursor: pointer;
 }
@@ -413,6 +411,13 @@ export default {
       background-color: $red;
     }
   }
+
+  .project-title--kynmobi::after {
+    @media all and(max-width:863px) {
+      bottom: -7px;
+    }
+  }
+
   .project-details {
     h3 {
       color: $black;
@@ -483,22 +488,6 @@ export default {
     transform: translateX(7px);
 
     opacity: 1;
-  }
-}
-
-//gsap testing
-.cross-1 {
-  position: absolute;
-  top: -130px;
-  left: 100%;
-
-  width: 180px;
-  height: 180px;
-}
-
-@media screen and (max-width: 900px) {
-  .cross-1 {
-    left: 0;
   }
 }
 </style>

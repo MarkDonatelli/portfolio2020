@@ -6,7 +6,7 @@
           <div class="highlight-wrap">
             <h2>Developer</h2>
             <span>
-              Team player,problem solver, open minded, disciplined, always
+              Team player, problem solver, open minded, disciplined, always
               learning
             </span>
           </div>
@@ -19,7 +19,7 @@
           </div>
           <div class="highlight-wrap">
             <h2>Designer</h2>
-            <span>Beautiful UI layouts, color themes, and creativity</span>
+            <p>Beautiful UI layouts, color themes, and creativity</p>
           </div>
           <div class="highlight-wrap">
             <h2>Experience</h2>
@@ -91,7 +91,7 @@ export default {
 
   @media (max-width: 768px) {
     margin-top: 35px;
-    padding-top: 57px;
+    padding-top: 35px;
     padding-bottom: 30px;
   }
 }
@@ -155,7 +155,14 @@ export default {
     }
 
     span {
-      font-family: $raleway;
+      font-family: $poppins;
+      font-weight: normal;
+
+      @include fluidType(font-size, 567px, 1400px, 16px, 18px);
+    }
+
+    p {
+      font-family: $poppins;
       font-weight: normal;
 
       @include fluidType(font-size, 567px, 1400px, 16px, 18px);

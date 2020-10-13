@@ -75,9 +75,15 @@
               </a>
               <p class="cta-p">OR</p>
               <a
+<<<<<<< HEAD
                 class="btn btn-primary"
                 href="#projects"
                 @click.prevent="scrollTo('title-block--projects')"
+=======
+                v-scroll-to="'#title-block--projects'"
+                class="btn btn-primary"
+                href="#"
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
               >
                 View Projects
                 <font-awesome-icon far icon="arrow-down" />
@@ -85,6 +91,7 @@
             </div>
           </div>
           <div class="lg-title-wrap lg-title-wrap--mobile mobile-nav-boxes">
+<<<<<<< HEAD
             <a
               class="nav-box"
               href="#projects"
@@ -112,6 +119,35 @@
             >
               <font-awesome-icon :icon="['fas', 'envelope']" />
               Contact
+=======
+            <a v-scroll-to="'#title-block--projects'" class="nav-box" href="#">
+              <div class="btn-inner">
+                <h2>Projects</h2>
+                <span class="info">Check out my latest projects.</span>
+              </div>
+              <span class="number">01</span>
+            </a>
+            <a v-scroll-to="'#techs'" class="nav-box" href="#">
+              <div class="btn-inner">
+                <h2>Technologies</h2>
+                <span class="info">Technologies I use.</span>
+              </div>
+              <span class="number">02</span>
+            </a>
+            <a v-scroll-to="'#about'" class="nav-box" href="#">
+              <div class="btn-inner">
+                <h2>About</h2>
+                <span class="info">Attributes.</span>
+              </div>
+              <span class="number">03</span>
+            </a>
+            <a v-scroll-to="'#sayHelloScrollTo'" class="nav-box" href="#">
+              <div class="btn-inner">
+                <h2>Contact</h2>
+                <span class="info">Have a question? Contact me here.</span>
+              </div>
+              <span class="number">04</span>
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
             </a>
           </div>
         </div>
@@ -180,12 +216,23 @@ export default {
         '-=0.5'
       )
       .to('.underline', 0.8, { width: '100%', ease: Expo.easeInOut }, '-=0.7')
+<<<<<<< HEAD
   },
   methods: {
     scrollTo(id) {
       const element = document.getElementById(id)
       element.scrollIntoView({ behavior: 'smooth' })
     },
+=======
+
+    const fedText = gsap.timeline({ yoyo: false })
+    fedText.fromTo(
+      '.sub-title',
+      0.8,
+      { autoAlpha: 0, y: '2%' },
+      { delay: 3, autoAlpha: 1, y: '0', ease: Power2.easeOut }
+    )
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
   },
   head() {
     return {
@@ -226,11 +273,23 @@ export default {
   z-index: 999;
 
   display: flex;
+<<<<<<< HEAD
   align-items: center;
   justify-content: center;
 
   width: 100%;
   height: 100vh;
+=======
+  overflow-x: hidden;
+  overflow-y: hidden;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
 
   background-color: $white;
 
@@ -394,6 +453,10 @@ nav {
 .main-title-block {
   position: relative;
 
+<<<<<<< HEAD
+  display: flex;
+  overflow: hidden;
+=======
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -468,6 +531,238 @@ nav {
   }
 }
 
+.main-content-block {
+  display: flex;
+  align-items: center;
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+<<<<<<< HEAD
+  max-width: 600px;
+  height: 100%;
+
+  transform: translateX(-101%);
+
+  color: white;
+  background: $red;
+
+  @include fluidType(padding-left, 991px, 1200px, 15px, 50px);
+  @include fluidType(padding-right, 991px, 1200px, 15px, 50px);
+  @include fluidType(max-width, 991px, 1200px, 315px, 600px);
+
+  @media all and(max-width:991px) {
+    max-width: 100%;
+    height: 315px;
+    margin-bottom: 0;
+  }
+
+  .social-links {
+    position: relative;
+    z-index: 1;
+    top: -55px;
+    left: 5px;
+
+    margin-top: auto;
+
+    @media all and(max-width:991px) {
+      top: -20px;
+    }
+
+    ul {
+      display: flex;
+
+      padding-left: 0;
+
+      list-style: none;
+      li {
+        @include fluidType(padding-right, 991px, 1200px, 25px, 50px);
+
+        img.icon-svg {
+          @include fluidType(height, 991px, 1200px, 20px, 25px);
+
+          &:hover {
+            -webkit-animation-name: up;
+            animation-name: up;
+            -webkit-animation-duration: 1.3s;
+            animation-duration: 1.3s;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+          }
+=======
+
+  @include fluidType(padding-left, 991px, 1200px, 15px, 50px);
+  @include fluidType(padding-right, 991px, 1200px, 15px, 50px);
+
+  .title {
+    color: $black;
+
+    font-weight: 700;
+
+    @include fluidType(font-size, 1200px, 1600px, 120px, 170px);
+    @include fluidType(line-height, 1200px, 1500px, 95px, 140px);
+    @include fluidType(letter-spacing, 1200px, 1500px, -7px, -10px);
+
+    @media all and(max-width:991px) {
+      font-size: 75px;
+      line-height: 57px;
+    }
+  }
+
+  .title--underline {
+    position: relative;
+
+    display: inline-block;
+
+    span.underline {
+      position: absolute;
+      z-index: -1;
+      bottom: -4%;
+      left: 0;
+
+      width: 0%;
+      height: 25%;
+
+      background-color: $red;
+    }
+  }
+  @media all and(max-width:991px) {
+    align-items: flex-start;
+
+    padding: 0;
+  }
+}
+
+.lg-title-wrap--desktop {
+  @media all and(max-width:991px) {
+    display: none;
+  }
+}
+
+.lg-title-wrap--mobile {
+  .title--underline {
+    span.underline {
+      bottom: -5%;
+
+      height: 15%;
+    }
+  }
+
+  @media all and(min-width:992px) {
+    display: none;
+  }
+  .title {
+    @include fluidType(font-size, 320px, 991px, 60px, 80px);
+    @include fluidType(line-height, 320px, 1200px, 47px, 65px);
+    @include fluidType(letter-spacing, 320px, 1200px, -3px, -5px);
+  }
+}
+
+.mobile-nav-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: 35px;
+
+  @media all and(min-width:992px) {
+    display: none;
+  }
+
+  span.info {
+    font-family: $poppins;
+
+    @include fluidType(font-size, 320px, 990px, 15px, 18px);
+  }
+
+  .nav-box {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    transition: 200ms all linear;
+    text-decoration: none;
+
+    color: $black;
+    border-top: 2px solid $black;
+    background-color: $white;
+
+    @include fluidType(padding-top, 320px, 990px, 30px, 40px);
+    @include fluidType(padding-bottom, 320px, 990px, 30px, 40px);
+
+    &:last-child {
+      border-bottom: 2px solid $black;
+    }
+
+    h2 {
+      position: relative;
+
+      padding-bottom: 10px;
+
+      @include fluidType(font-size, 320px, 990px, 30px, 65px);
+
+      &::after {
+        position: absolute;
+
+        width: 12px;
+        height: 12px;
+
+        content: '';
+        transition: 200ms all linear;
+
+        border-radius: 50%;
+        background-color: $red;
+
+        @include fluidType(bottom, 320px, 990px, 22px, 35px);
+
+        @media all and(max-width:550px) {
+          width: 9px;
+          height: 9px;
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
+        }
+      }
+    }
+
+<<<<<<< HEAD
+    .line {
+      position: absolute;
+
+      width: 0;
+      height: 2px;
+
+      background-color: $white;
+
+      @include fluidType(left, 991px, 1200px, 137px, 227px);
+      @include fluidType(top, 991px, 1200px, 10px, 12px);
+=======
+    .number {
+      position: absolute;
+      right: 15px;
+
+      @include fluidType(font-size, 320px, 990px, 35px, 95px);
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $red;
+
+      h2::after {
+        background-color: $white;
+      }
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
+    }
+  }
+}
+
+<<<<<<< HEAD
 .main-content-block {
   display: flex;
   align-items: center;
@@ -609,6 +904,11 @@ nav {
 .cta-block {
   display: flex;
   align-items: center;
+=======
+.cta-block {
+  display: flex;
+  align-items: center;
+>>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
 
   margin-top: 35px;
 

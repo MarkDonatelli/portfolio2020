@@ -3,25 +3,6 @@ html {
   overflow-x: hidden;
 }
 
-//cursor
-#cursor-custom {
-  position: fixed;
-  z-index: 2;
-
-  width: 15px;
-  height: 15px;
-
-  transition: transform 0.3s ease;
-  pointer-events: none;
-
-  border-radius: 50%;
-  background: $black;
-
-  filter: hue-rotate(100%);
-  will-change: top, left;
-  mix-blend-mode: difference;
-}
-
 .container-full-width {
   width: 100%;
   margin-right: auto;
@@ -72,7 +53,7 @@ html {
   padding: 10px 15px;
 
   cursor: pointer;
-  transition: 0.4s all ease-in-out;
+  transition: 200ms all linear;
 
   color: $black;
   border: 2px solid $black;
@@ -81,6 +62,8 @@ html {
 
   font-size: 18px;
   font-weight: 700;
+
+  -webkit-backface-visibility: hidden;
 
   &::before {
     position: absolute;
@@ -93,7 +76,7 @@ html {
     padding: 23px 35px;
 
     content: '';
-    transition: 0.4s all ease-in-out;
+    transition: 200ms all linear;
 
     border: 2px solid $black;
     outline: none !important;
@@ -154,19 +137,6 @@ a.btn-primary {
   color: $black;
 }
 
-//dark primary
-
-a.btn-primary--dark {
-  color: $white;
-}
-.btn-primary--dark {
-  border: 2px solid $white;
-  background-color: $black;
-
-  &::before {
-    border: 2px solid $white;
-  }
-}
 
 // section title
 .title--section {
