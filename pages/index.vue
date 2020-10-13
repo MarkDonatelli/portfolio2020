@@ -75,15 +75,9 @@
               </a>
               <p class="cta-p">OR</p>
               <a
-<<<<<<< HEAD
-                class="btn btn-primary"
-                href="#projects"
-                @click.prevent="scrollTo('title-block--projects')"
-=======
                 v-scroll-to="'#title-block--projects'"
                 class="btn btn-primary"
                 href="#"
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
               >
                 View Projects
                 <font-awesome-icon far icon="arrow-down" />
@@ -91,35 +85,6 @@
             </div>
           </div>
           <div class="lg-title-wrap lg-title-wrap--mobile mobile-nav-boxes">
-<<<<<<< HEAD
-            <a
-              class="nav-box"
-              href="#projects"
-              @click.prevent="scrollTo('title-block--projects')"
-            >
-              <font-awesome-icon :icon="['fas', 'project-diagram']" />
-              Projects
-            </a>
-            <a
-              class="nav-box"
-              href="#technologies"
-              @click.prevent="scrollTo('techs')"
-            >
-              <font-awesome-icon :icon="['fas', 'laptop-code']" />
-              Technologies
-            </a>
-            <a class="nav-box" href="#about" @click.prevent="scrollTo('about')">
-              <font-awesome-icon :icon="['fas', 'user']" />
-              About
-            </a>
-            <a
-              class="nav-box"
-              href="#contact"
-              @click.prevent="scrollTo('contact')"
-            >
-              <font-awesome-icon :icon="['fas', 'envelope']" />
-              Contact
-=======
             <a v-scroll-to="'#title-block--projects'" class="nav-box" href="#">
               <div class="btn-inner">
                 <h2>Projects</h2>
@@ -147,7 +112,6 @@
                 <span class="info">Have a question? Contact me here.</span>
               </div>
               <span class="number">04</span>
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
             </a>
           </div>
         </div>
@@ -216,14 +180,6 @@ export default {
         '-=0.5'
       )
       .to('.underline', 0.8, { width: '100%', ease: Expo.easeInOut }, '-=0.7')
-<<<<<<< HEAD
-  },
-  methods: {
-    scrollTo(id) {
-      const element = document.getElementById(id)
-      element.scrollIntoView({ behavior: 'smooth' })
-    },
-=======
 
     const fedText = gsap.timeline({ yoyo: false })
     fedText.fromTo(
@@ -232,7 +188,6 @@ export default {
       { autoAlpha: 0, y: '2%' },
       { delay: 3, autoAlpha: 1, y: '0', ease: Power2.easeOut }
     )
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
   },
   head() {
     return {
@@ -273,13 +228,6 @@ export default {
   z-index: 999;
 
   display: flex;
-<<<<<<< HEAD
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100vh;
-=======
   overflow-x: hidden;
   overflow-y: hidden;
   align-items: center;
@@ -289,7 +237,6 @@ export default {
   width: 100vw;
   height: 100%;
   min-height: 100%;
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
 
   background-color: $white;
 
@@ -453,10 +400,6 @@ nav {
 .main-title-block {
   position: relative;
 
-<<<<<<< HEAD
-  display: flex;
-  overflow: hidden;
-=======
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -534,63 +477,10 @@ nav {
 .main-content-block {
   display: flex;
   align-items: center;
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
   flex-direction: column;
   justify-content: center;
 
   width: 100%;
-<<<<<<< HEAD
-  max-width: 600px;
-  height: 100%;
-
-  transform: translateX(-101%);
-
-  color: white;
-  background: $red;
-
-  @include fluidType(padding-left, 991px, 1200px, 15px, 50px);
-  @include fluidType(padding-right, 991px, 1200px, 15px, 50px);
-  @include fluidType(max-width, 991px, 1200px, 315px, 600px);
-
-  @media all and(max-width:991px) {
-    max-width: 100%;
-    height: 315px;
-    margin-bottom: 0;
-  }
-
-  .social-links {
-    position: relative;
-    z-index: 1;
-    top: -55px;
-    left: 5px;
-
-    margin-top: auto;
-
-    @media all and(max-width:991px) {
-      top: -20px;
-    }
-
-    ul {
-      display: flex;
-
-      padding-left: 0;
-
-      list-style: none;
-      li {
-        @include fluidType(padding-right, 991px, 1200px, 25px, 50px);
-
-        img.icon-svg {
-          @include fluidType(height, 991px, 1200px, 20px, 25px);
-
-          &:hover {
-            -webkit-animation-name: up;
-            animation-name: up;
-            -webkit-animation-duration: 1.3s;
-            animation-duration: 1.3s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-          }
-=======
 
   @include fluidType(padding-left, 991px, 1200px, 15px, 50px);
   @include fluidType(padding-right, 991px, 1200px, 15px, 50px);
@@ -726,23 +616,10 @@ nav {
         @media all and(max-width:550px) {
           width: 9px;
           height: 9px;
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
         }
       }
     }
 
-<<<<<<< HEAD
-    .line {
-      position: absolute;
-
-      width: 0;
-      height: 2px;
-
-      background-color: $white;
-
-      @include fluidType(left, 991px, 1200px, 137px, 227px);
-      @include fluidType(top, 991px, 1200px, 10px, 12px);
-=======
     .number {
       position: absolute;
       right: 15px;
@@ -757,146 +634,6 @@ nav {
       h2::after {
         background-color: $white;
       }
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
-    }
-  }
-}
-
-<<<<<<< HEAD
-.main-content-block {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-  width: 100%;
-
-  @include fluidType(padding-left, 991px, 1200px, 15px, 50px);
-  @include fluidType(padding-right, 991px, 1200px, 15px, 50px);
-
-  .title {
-    color: $black;
-
-    font-weight: 700;
-
-    @include fluidType(font-size, 1200px, 1600px, 120px, 170px);
-    @include fluidType(line-height, 1200px, 1500px, 95px, 140px);
-    @include fluidType(letter-spacing, 1200px, 1500px, -7px, -10px);
-
-    @media all and(max-width:991px) {
-      font-size: 75px;
-      line-height: 57px;
-    }
-  }
-
-  .title--underline {
-    position: relative;
-
-    display: inline-block;
-
-    span.underline {
-      position: absolute;
-      z-index: -1;
-      bottom: -4%;
-      left: 0;
-
-      width: 0%;
-      height: 25%;
-
-      background-color: $red;
-    }
-  }
-  @media all and(max-width:991px) {
-    align-items: flex-start;
-
-    padding: 0;
-  }
-}
-
-.lg-title-wrap--desktop {
-  @media all and(max-width:991px) {
-    display: none;
-  }
-}
-
-.lg-title-wrap--mobile {
-  .title--underline {
-    span.underline {
-      bottom: -5%;
-
-      height: 15%;
-    }
-  }
-
-  @media all and(min-width:992px) {
-    display: none;
-  }
-  .title {
-    @include fluidType(font-size, 320px, 991px, 60px, 80px);
-    @include fluidType(line-height, 320px, 1200px, 47px, 65px);
-    @include fluidType(letter-spacing, 320px, 1200px, -3px, -5px);
-  }
-}
-
-.mobile-nav-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  width: 100%;
-  margin-top: 25px;
-  padding: 0 15px;
-
-  @media all and(min-width:992px) {
-    display: none;
-  }
-
-  .nav-box {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 200px;
-    height: 200px;
-    height: auto;
-    margin: 5px 0 25px 0;
-    padding: 10px;
-
-    transition: 200ms all linear;
-    text-decoration: none;
-
-    color: $black;
-    border: 2px solid $black;
-    background-color: $white;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    &::before {
-      position: absolute;
-      z-index: -1;
-      top: 7px;
-      left: -7px;
-
-      width: 100%;
-      height: 100%;
-
-      content: '';
-      transition: 200ms all linear;
-
-      border: 2px solid $black;
-    }
-
-    &:hover {
-      color: $white;
-      background-color: $red;
-
-      &::before {
-        top: 0;
-        left: 0;
-      }
     }
   }
 }
@@ -904,11 +641,6 @@ nav {
 .cta-block {
   display: flex;
   align-items: center;
-=======
-.cta-block {
-  display: flex;
-  align-items: center;
->>>>>>> 38e84628d72cbafe606310b7858c1135ac77fd06
 
   margin-top: 35px;
 
