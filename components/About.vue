@@ -19,9 +19,7 @@
           </div>
           <div class="highlight-wrap">
             <h2>Designer</h2>
-            <span>
-              Beautiful UI layouts, color themes, and creativity
-            </span>
+            <span>Beautiful UI layouts, color themes, and creativity</span>
           </div>
           <div class="highlight-wrap">
             <h2>Experience</h2>
