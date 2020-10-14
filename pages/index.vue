@@ -132,6 +132,7 @@
 
 <script>
 import { gsap, TimelineMax, Expo, Power2 } from 'gsap/all'
+
 export default {
   data() {
     return {
@@ -143,6 +144,9 @@ export default {
   mounted() {
     // page loader
     const pageLoader = gsap.timeline({ yoyo: false })
+
+    // eslint-disable-next-line no-console
+    console.log(process.env.apiSecret)
 
     pageLoader
       .to('.overlay', 2, {

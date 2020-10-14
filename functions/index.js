@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   secure: false, // upgrade later with STARTTLS
   auth: {
     user: 'apikey',
-    pass: 'apiSecret',
+    pass: process.env.apiSecret,
   },
 })
 
