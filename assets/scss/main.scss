@@ -64,6 +64,7 @@ html {
   font-weight: 700;
 
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
   &::before {
     position: absolute;
@@ -136,7 +137,6 @@ a.btn-primary {
 
   color: $black;
 }
-
 
 // section title
 .title--section {
