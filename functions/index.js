@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   secure: false, // upgrade later with STARTTLS
   auth: {
     user: 'apikey',
-    pass: process.env.SENDGRID_API_KEY,
+    pass: 'SENDGRID_API_KEY',
   },
 })
 
