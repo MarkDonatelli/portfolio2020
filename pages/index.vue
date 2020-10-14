@@ -144,10 +144,6 @@ export default {
   mounted() {
     // page loader
     const pageLoader = gsap.timeline({ yoyo: false })
-
-    // eslint-disable-next-line no-console
-    console.log(process.env.apiSecret)
-
     pageLoader
       .to('.overlay', 2, {
         display: 'none',
