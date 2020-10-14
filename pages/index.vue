@@ -143,6 +143,7 @@ export default {
   },
   mounted() {
     // page loader
+
     const pageLoader = gsap.timeline({ yoyo: false })
 
     pageLoader
