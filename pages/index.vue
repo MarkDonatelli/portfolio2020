@@ -124,7 +124,7 @@
     <!-- About -->
     <About />
     <!-- contact form -->
-    <ContactForm />
+    <ContactFormNew />
     <!-- footer -->
     <Footer />
   </div>
