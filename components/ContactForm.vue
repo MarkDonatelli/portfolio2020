@@ -33,7 +33,6 @@
                 method="post"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-                @submit.prevent="submitForm()"
               >
                 <input type="hidden" name="form-name" value="contactForm" />
                 <div class="form-group">
@@ -116,7 +115,11 @@
                   </div>
                   <!-- end user message -->
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  @click.prevent="validate()"
+                >
                   Send Message
                   <font-awesome-icon far icon="arrow-right" />
                 </button>
@@ -172,12 +175,18 @@ export default {
     },
   },
   methods: {
-    submitForm() {
-      this.$v.$touch()
-      if (this.$v.$invalid) {
-        return true
-      } else {
-        this.show_contact = false
+    // submitForm() {
+    //   this.$v.$touch()
+    //   if (this.$v.$invalid) {
+    //     return true
+    //   } else {
+    //     this.show_contact = false
+    //   }
+    // },
+
+    validate() {
+      this.$v.$touch() // it will validate all fields
+      if (!this.$v.$invalid) {
       }
     },
   },
