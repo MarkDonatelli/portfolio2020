@@ -123,11 +123,9 @@
     <Techs />
     <!-- About -->
     <About />
-    <!-- contact form -->
-    <ContactForm />
+
     <!-- footer -->
     <Footer />
-
     <!-- contact form New -->
     <ContactFormNew />
   </div>
