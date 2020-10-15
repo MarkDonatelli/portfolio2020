@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   /*
   /*
@@ -70,6 +72,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     'nuxt-gsap',
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
@@ -91,10 +94,6 @@ export default {
 
   publicRuntimeConfig: {},
   privateRuntimeConfig: {
-    apiSecret: process.env.SENDGRID_API_KEY,
-  },
-
-  env: {
     apiSecret: process.env.SENDGRID_API_KEY,
   },
 }

@@ -144,6 +144,7 @@ export default {
   mounted() {
     // page loader
     const pageLoader = gsap.timeline({ yoyo: false })
+
     pageLoader
       .to('.overlay', 2, {
         display: 'none',
