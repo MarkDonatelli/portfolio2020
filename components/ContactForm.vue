@@ -142,29 +142,6 @@
         </div>
       </div>
     </div>
-    <form
-      name="contactFormTest"
-      method="post"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-    >
-      <div class="form-group">
-        <!--user name -->
-        <div class="floating-label">
-          <input
-            class="floating-input"
-            name="name"
-            type="text"
-            placeholder=" "
-          />
-          <label>Enter Your Name</label>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">
-        Send Message
-        <font-awesome-icon far icon="arrow-right" />
-      </button>
-    </form>
   </div>
 </template>
 
