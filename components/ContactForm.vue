@@ -1,6 +1,30 @@
 <template>
   <div class="container--form">
-    <div id="contact" class="contact-form">
+    <div id="contactTest" class="contact-form">
+      <form
+        name="contactFormTest"
+        method="post"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <div class="form-group">
+          <!--user name -->
+          <div class="floating-label">
+            <input
+              class="floating-input"
+              name="name"
+              type="text"
+              placeholder=" "
+            />
+            <label>Enter Your Name</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Send Message
+          <font-awesome-icon far icon="arrow-right" />
+        </button>
+      </form>
+
       <div class="row row--form">
         <div class="col-form">
           <transition name="fade" mode="out-in">
