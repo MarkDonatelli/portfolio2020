@@ -4,7 +4,11 @@
       <div class="row row--form">
         <div class="col-form">
           <transition name="fade" mode="out-in">
-            <div class="form-content shadow">
+            <div
+              v-if="show_contact == true"
+              key="1"
+              class="form-content shadow"
+            >
               <div id="sayHello" class="title-block title-block--contact">
                 <p class="hello">&#128075;</p>
                 <h1
@@ -24,24 +28,15 @@
                 </p>
               </div>
 
-              <form
-                name="contactForm"
-                method="post"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                @submit.prevent="handleSubmit"
-              >
-                <input type="hidden" name="form-name" value="contactForm" />
+              <form @submit.prevent="submitForm()">
                 <div class="form-group">
                   <!--user name -->
                   <div class="floating-label">
                     <input
                       v-model="contact_name"
                       class="floating-input"
-                      name="name"
                       type="text"
                       placeholder=" "
-                      required
                       :class="{
                         'child-has-error': $v.contact_name.$error,
                       }"
@@ -64,9 +59,7 @@
                       v-model="contact_email"
                       class="floating-input"
                       type="text"
-                      name="email"
                       placeholder=" "
-                      required
                       :class="{
                         'child-has-error': $v.contact_email.$error,
                       }"
@@ -93,10 +86,8 @@
                       v-model="contact_message"
                       class="form-control form-control--textarea"
                       rows="5"
-                      name="message"
                       placeholder="Enter Your Message"
                       :class="{ 'child-has-error': $v.contact_message.$error }"
-                      required
                     />
                     <p v-if="$v.contact_message.$dirty">
                       <span
@@ -115,11 +106,31 @@
                   </div>
                   <!-- end user message -->
                 </div>
-                <button type="submit" class="btn btn-primary">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  @click="submitForm()"
+                >
                   Send Message
                   <font-awesome-icon far icon="arrow-right" />
                 </button>
               </form>
+            </div>
+
+            <div
+              v-else
+              key="2"
+              class="form-content form-content--success shadow"
+            >
+              <img
+                src="../assets/img/mail-sent.svg"
+                class="img-responsive img-message-success"
+              />
+              <h1 class="title title--section title-block--contact">
+                Success!
+                <span class="underline"></span>
+              </h1>
+              <p>Thank you for contacting me! I will be in touch shortly :)</p>
             </div>
           </transition>
         </div>
@@ -134,14 +145,11 @@ export default {
   data() {
     return {
       title: 'Mark Donatelli Contact Form',
+      show_contact: true,
+
       contact_name: '',
       contact_email: '',
       contact_message: '',
-      form: {
-        contact_name: '',
-        contact_email: '',
-        contact_message: '',
-      },
     }
   },
   validations: {
@@ -158,39 +166,19 @@ export default {
     },
   },
   methods: {
-    // submitForm() {
-    //   this.$v.$touch()
-    //   if (this.$v.$invalid) {
-    //     return true
-    //   } else {
-    //     this.show_contact = false
-    //   }
-    // },
-
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
-    },
-    handleSubmit() {
-      fetch('/', {
-        method: 'post',
-
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-
-        body: this.encode({
-          'form-name': 'contactForm',
-          ...this.form,
-        }),
-      })
-        // eslint-disable-next-line no-console
-        .then(() => console.log('success'))
-        // eslint-disable-next-line no-console
-        .catch((e) => console.error(e))
+    submitForm() {
+      this.$v.$touch()
+      if (this.$v.$invalid) {
+        return true
+      } else {
+        const url = `https://us-central1-my-portfolio-4d79e.cloudfunctions.net/sendEmail?email_from=${this.contact_email}&name=${this.contact_name}&message=${this.contact_message}`
+        const requestOptions = {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' },
+        }
+        fetch(url, requestOptions)
+        this.show_contact = false
+      }
     },
   },
 }
