@@ -45,7 +45,7 @@
                       :class="{
                         'child-has-error': $v.contact_name.$error,
                       }"
-                      @blur="$v.contact_name.$touch()"
+                      @change="$v.contact_name.$touch()"
                     />
                     <label>Enter Your Name</label>
                     <p v-if="$v.contact_name.$dirty">
@@ -182,7 +182,7 @@ export default {
         method: 'post',
 
         headers: {
-          'Content-Type': 'application/x-www-urlendcoded',
+          'Content-Type': 'application/x-www-form-urlendcoded',
         },
 
         body: this.encode({
