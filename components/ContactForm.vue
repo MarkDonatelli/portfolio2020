@@ -4,11 +4,7 @@
       <div class="row row--form">
         <div class="col-form">
           <transition name="fade" mode="out-in">
-            <div
-              v-if="show_contact == true"
-              key="1"
-              class="form-content shadow"
-            >
+            <div class="form-content shadow">
               <div id="sayHello" class="title-block title-block--contact">
                 <p class="hello">&#128075;</p>
                 <h1
@@ -33,6 +29,7 @@
                 method="post"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                @submit.prevent="handleSubmit"
               >
                 <input type="hidden" name="form-name" value="contactForm" />
                 <div class="form-group">
@@ -44,9 +41,11 @@
                       name="name"
                       type="text"
                       placeholder=" "
+                      required
                       :class="{
                         'child-has-error': $v.contact_name.$error,
                       }"
+                      @blur="$v.contact_name.$touch()"
                     />
                     <label>Enter Your Name</label>
                     <p v-if="$v.contact_name.$dirty">
@@ -68,9 +67,11 @@
                       type="text"
                       name="email"
                       placeholder=" "
+                      required
                       :class="{
                         'child-has-error': $v.contact_email.$error,
                       }"
+                      @blur="$v.contact_email.$touch()"
                     />
                     <label>Enter Your Email</label>
                     <p v-if="$v.contact_email.$dirty">
@@ -97,6 +98,8 @@
                       name="message"
                       placeholder="Enter Your Message"
                       :class="{ 'child-has-error': $v.contact_message.$error }"
+                      required
+                      @blur="$v.contact_message.$touch()"
                     />
                     <p v-if="$v.contact_message.$dirty">
                       <span
@@ -115,31 +118,11 @@
                   </div>
                   <!-- end user message -->
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  @click.prevent="validate()"
-                >
+                <button type="submit" class="btn btn-primary">
                   Send Message
                   <font-awesome-icon far icon="arrow-right" />
                 </button>
               </form>
-            </div>
-
-            <div
-              v-else
-              key="2"
-              class="form-content form-content--success shadow"
-            >
-              <img
-                src="../assets/img/mail-sent.svg"
-                class="img-responsive img-message-success"
-              />
-              <h1 class="title title--section title-block--contact">
-                Success!
-                <span class="underline"></span>
-              </h1>
-              <p>Thank you for contacting me! I will be in touch shortly :)</p>
             </div>
           </transition>
         </div>
@@ -154,11 +137,14 @@ export default {
   data() {
     return {
       title: 'Mark Donatelli Contact Form',
-      show_contact: true,
-
       contact_name: '',
       contact_email: '',
       contact_message: '',
+      form: {
+        name: '',
+        email: '',
+        message: '',
+      },
     }
   },
   validations: {
@@ -184,10 +170,30 @@ export default {
     //   }
     // },
 
-    validate() {
-      this.$v.$touch() // it will validate all fields
-      if (!this.$v.$invalid) {
-      }
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
+    handleSubmit() {
+      fetch('/', {
+        method: 'post',
+
+        headers: {
+          'Content-Type': 'application/x-www-urlendcoded',
+        },
+
+        body: this.encode({
+          'form-name': 'contactForm',
+          ...this.form,
+        }),
+      })
+        // eslint-disable-next-line no-console
+        .then(() => console.log('success'))
+        // eslint-disable-next-line no-console
+        .catch((e) => console.error(e))
     },
   },
 }
