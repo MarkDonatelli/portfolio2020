@@ -27,6 +27,7 @@
               <form
                 name="contactForm"
                 method="post"
+                action="/index"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 @submit.prevent="handleSubmit"
@@ -45,7 +46,6 @@
                       :class="{
                         'child-has-error': $v.contact_name.$error,
                       }"
-                      @change="$v.contact_name.$touch()"
                     />
                     <label>Enter Your Name</label>
                     <p v-if="$v.contact_name.$dirty">
@@ -71,7 +71,6 @@
                       :class="{
                         'child-has-error': $v.contact_email.$error,
                       }"
-                      @blur="$v.contact_email.$touch()"
                     />
                     <label>Enter Your Email</label>
                     <p v-if="$v.contact_email.$dirty">
@@ -99,7 +98,6 @@
                       placeholder="Enter Your Message"
                       :class="{ 'child-has-error': $v.contact_message.$error }"
                       required
-                      @blur="$v.contact_message.$touch()"
                     />
                     <p v-if="$v.contact_message.$dirty">
                       <span
@@ -182,7 +180,7 @@ export default {
         method: 'post',
 
         headers: {
-          'Content-Type': 'application/x-www-form-urlendcoded',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
 
         body: this.encode({
