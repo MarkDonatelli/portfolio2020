@@ -16,7 +16,16 @@
             type="text"
             name="name"
             class="form-control"
+            :class="{
+              'is-invalid': submitted && $v.user.name.$error,
+            }"
           />
+          <div
+            v-if="submitted && !$v.user.name.required"
+            class="invalid-feedback"
+          >
+            Name is required
+          </div>
         </div>
 
         <div class="form-group">
@@ -27,7 +36,15 @@
             type="email"
             name="email"
             class="form-control"
+            :class="{ 'is-invalid': submitted && $v.user.email.$error }"
           />
+          <div
+            v-if="submitted && $v.user.email.$error"
+            class="invalid-feedback"
+          >
+            <span v-if="!$v.user.email.required">Email is required</span>
+            <span v-if="!$v.user.email.email">Email is invalid</span>
+          </div>
         </div>
 
         <div class="form-group button-row">

@@ -129,7 +129,7 @@
     <Footer />
 
     <!-- contact form -->
-    <ContactFormNew />
+    <Contact />
   </div>
 </template>
 
