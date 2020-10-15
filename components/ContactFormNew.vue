@@ -1,52 +1,40 @@
 <template>
-  <div class="container">
-    <form
-      name="contactTest"
-      method="post"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      @submit.prevent="handleSubmit"
-    >
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input
-          id="name"
-          v-model="user.name"
-          type="text"
-          name="name"
-          class="form-control"
-          :class="{
-            'is-invalid': submitted && $v.user.name.$error,
-          }"
-        />
-        <div
-          v-if="submitted && !$v.user.name.required"
-          class="invalid-feedback"
-        >
-          Name is required
+  <div class="container-form">
+    <div class="col-form">
+      <form
+        name="contactTest"
+        method="post"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        @submit.prevent="handleSubmit"
+      >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            v-model="user.name"
+            type="text"
+            name="name"
+            class="form-control"
+          />
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          id="email"
-          v-model="user.email"
-          type="email"
-          name="email"
-          class="form-control"
-          :class="{ 'is-invalid': submitted && $v.user.email.$error }"
-        />
-        <div v-if="submitted && $v.user.email.$error" class="invalid-feedback">
-          <span v-if="!$v.user.email.required">Email is required</span>
-          <span v-if="!$v.user.email.email">Email is invalid</span>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            v-model="user.email"
+            type="email"
+            name="email"
+            class="form-control"
+          />
         </div>
-      </div>
 
-      <div class="form-group">
-        <button class="btn btn-primary">Send Message</button>
-      </div>
-    </form>
+        <div class="form-group button-row">
+          <button class="btn">Send Message</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -58,7 +46,6 @@ export default {
     return {
       user: {
         name: '',
-
         email: '',
       },
       submitted: false,
@@ -86,3 +73,26 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.container-form {
+  display: flex;
+
+  justify-content: center;
+  margin: 100px;
+}
+
+.button-row {
+  margin-top: 25px;
+
+  .btn {
+    background-color: $red;
+
+    color: $white;
+    max-width: 250px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+  }
+}
+</style>
