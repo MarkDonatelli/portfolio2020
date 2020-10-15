@@ -1,6 +1,7 @@
 const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 const nodemailer = require('nodemailer')
+const { SENDGRID_API_KEY } = process.env
 admin.initializeApp()
 
 const transporter = nodemailer.createTransport({
@@ -9,7 +10,7 @@ const transporter = nodemailer.createTransport({
   secure: false, // upgrade later with STARTTLS
   auth: {
     user: 'apikey',
-    pass: process.env.SENDGRID_API_KEY,
+    pass: SENDGRID_API_KEY,
   },
 })
 
