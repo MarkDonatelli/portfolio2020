@@ -127,6 +127,8 @@
     <ContactForm />
     <!-- footer -->
     <Footer />
+    <!-- contact test -->
+    <Contact />
   </div>
 </template>
 
