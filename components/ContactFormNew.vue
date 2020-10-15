@@ -1,57 +1,52 @@
 <template>
   <div class="container">
-    <div class="row">
-      <form
-        name="contactTest"
-        method="post"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        @submit.prevent="handleSubmit"
-      >
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            id="name"
-            v-model="user.name"
-            type="text"
-            name="name"
-            class="form-control"
-            :class="{
-              'is-invalid': submitted && $v.user.name.$error,
-            }"
-          />
-          <div
-            v-if="submitted && !$v.user.name.required"
-            class="invalid-feedback"
-          >
-            Name is required
-          </div>
+    <form
+      name="contactTest"
+      method="post"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      @submit.prevent="handleSubmit"
+    >
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          id="name"
+          v-model="user.name"
+          type="text"
+          name="name"
+          class="form-control"
+          :class="{
+            'is-invalid': submitted && $v.user.name.$error,
+          }"
+        />
+        <div
+          v-if="submitted && !$v.user.name.required"
+          class="invalid-feedback"
+        >
+          Name is required
         </div>
+      </div>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            id="email"
-            v-model="user.email"
-            type="email"
-            name="email"
-            class="form-control"
-            :class="{ 'is-invalid': submitted && $v.user.email.$error }"
-          />
-          <div
-            v-if="submitted && $v.user.email.$error"
-            class="invalid-feedback"
-          >
-            <span v-if="!$v.user.email.required">Email is required</span>
-            <span v-if="!$v.user.email.email">Email is invalid</span>
-          </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          v-model="user.email"
+          type="email"
+          name="email"
+          class="form-control"
+          :class="{ 'is-invalid': submitted && $v.user.email.$error }"
+        />
+        <div v-if="submitted && $v.user.email.$error" class="invalid-feedback">
+          <span v-if="!$v.user.email.required">Email is required</span>
+          <span v-if="!$v.user.email.email">Email is invalid</span>
         </div>
+      </div>
 
-        <div class="form-group">
-          <button class="btn btn-primary">Send Message</button>
-        </div>
-      </form>
-    </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Send Message</button>
+      </div>
+    </form>
   </div>
 </template>
 
