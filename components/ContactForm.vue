@@ -33,6 +33,7 @@
                 method="post"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                @submit.prevent="submitForm()"
               >
                 <input type="hidden" name="form-name" value="contactForm" />
                 <div class="form-group">
