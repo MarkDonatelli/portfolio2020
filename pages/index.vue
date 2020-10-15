@@ -123,8 +123,6 @@
     <Techs />
     <!-- About -->
     <About />
-    <!-- contact form -->
-    <ContactForm />
     <!-- footer -->
     <Footer />
     <!-- contact test -->
