@@ -32,11 +32,10 @@
                 name="contactForm"
                 method="post"
                 data-netlify="true"
-                netlify
                 netlify-honeypot="bot-field"
                 @submit.prevent="submitForm()"
               >
-                <input type="hidden" name="form-name" value="contactus" />
+                <input type="hidden" name="form-name" value="contactForm" />
                 <div class="form-group">
                   <!--user name -->
                   <div class="floating-label">
