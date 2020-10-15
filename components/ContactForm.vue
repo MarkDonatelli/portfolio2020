@@ -28,13 +28,22 @@
                 </p>
               </div>
 
-              <form @submit.prevent="submitForm()">
+              <form
+                name="contactForm"
+                action="/thanks"
+                method="post"
+                netlify
+                netlify-honeypot="bot-field"
+                @submit.prevent="submitForm()"
+              >
+                <input type="hidden" name="form-name" value="contactus" />
                 <div class="form-group">
                   <!--user name -->
                   <div class="floating-label">
                     <input
                       v-model="contact_name"
                       class="floating-input"
+                      name="name"
                       type="text"
                       placeholder=" "
                       :class="{
@@ -59,6 +68,7 @@
                       v-model="contact_email"
                       class="floating-input"
                       type="text"
+                      name="email"
                       placeholder=" "
                       :class="{
                         'child-has-error': $v.contact_email.$error,
@@ -86,6 +96,7 @@
                       v-model="contact_message"
                       class="form-control form-control--textarea"
                       rows="5"
+                      name="message"
                       placeholder="Enter Your Message"
                       :class="{ 'child-has-error': $v.contact_message.$error }"
                     />
