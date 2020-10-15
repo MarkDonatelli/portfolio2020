@@ -32,6 +32,7 @@
                 name="contactForm"
                 method="post"
                 data-netlify="true"
+                netlify
                 netlify-honeypot="bot-field"
                 @submit.prevent="submitForm()"
               >
