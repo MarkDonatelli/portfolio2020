@@ -30,8 +30,7 @@
 
               <form
                 name="contactForm"
-                action="/thanks"
-                method="post"
+                method="POST"
                 netlify
                 netlify-honeypot="bot-field"
                 @submit.prevent="submitForm()"
@@ -182,12 +181,6 @@ export default {
       if (this.$v.$invalid) {
         return true
       } else {
-        const url = `https://us-central1-my-portfolio-4d79e.cloudfunctions.net/sendEmail?email_from=${this.contact_email}&name=${this.contact_name}&message=${this.contact_message}`
-        const requestOptions = {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' },
-        }
-        fetch(url, requestOptions)
         this.show_contact = false
       }
     },
