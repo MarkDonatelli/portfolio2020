@@ -27,7 +27,6 @@
               <form
                 name="contactForm"
                 method="post"
-                action="/index"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 @submit.prevent="handleSubmit"
@@ -139,9 +138,9 @@ export default {
       contact_email: '',
       contact_message: '',
       form: {
-        name: '',
-        email: '',
-        message: '',
+        contact_name: '',
+        contact_email: '',
+        contact_message: '',
       },
     }
   },
