@@ -15,15 +15,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^0.1.10",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "firebase": "^7.23.0",
     "node-forge": "^0.10.0",
     "nuxt": "^2.14.6",
     "nuxt-gsap": "^0.1.4",
     "vue-parallaxy": "^1.1.1",
     "vue-scrollto": "^2.19.1",
     "vue-typed-js": "^0.1.2",
-    "vuefire": "^2.2.4",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {

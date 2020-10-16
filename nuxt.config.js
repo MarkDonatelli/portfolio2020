@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 export default {
   /*
   /*
@@ -54,7 +52,6 @@ export default {
   plugins: [
     '~/plugins/fontawesome.js',
     '~/plugins/scroll-trigger.js',
-    '~/plugins/firestore.js',
     '~/plugins/scroll-to.js',
     { src: '~/plugins/vuelidate.js', ssr: true },
     { src: '~plugins/ga.js', mode: 'client' },
@@ -72,7 +69,6 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     'nuxt-gsap',
-    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
