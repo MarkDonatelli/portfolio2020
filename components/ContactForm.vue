@@ -28,13 +28,21 @@
                 </p>
               </div>
 
-              <form @submit.prevent="submitForm()">
+              <form
+                name="contactForm"
+                method="post"
+                netlify-honeypot="bot-field"
+                data-netlify="true"
+                @submit.prevent="handleSubmit()"
+              >
+                <input type="hidden" name="form-name" value="contactForm" />
                 <div class="form-group">
                   <!--user name -->
                   <div class="floating-label">
                     <input
                       v-model="contact_name"
                       class="floating-input"
+                      name="name"
                       type="text"
                       placeholder=" "
                       :class="{
@@ -59,6 +67,7 @@
                       v-model="contact_email"
                       class="floating-input"
                       type="text"
+                      name="email"
                       placeholder=" "
                       :class="{
                         'child-has-error': $v.contact_email.$error,
@@ -86,6 +95,7 @@
                       v-model="contact_message"
                       class="form-control form-control--textarea"
                       rows="5"
+                      name="message"
                       placeholder="Enter Your Message"
                       :class="{ 'child-has-error': $v.contact_message.$error }"
                     />
@@ -162,19 +172,54 @@ export default {
     },
   },
   methods: {
-    submitForm() {
+    // submitForm() {
+    //   this.$v.$touch()
+    //   if (this.$v.$invalid) {
+    //     return true
+    //   } else {
+    //     const url = `https://us-central1-my-portfolio-4d79e.cloudfunctions.net/sendEmail?email_from=${this.contact_email}&name=${this.contact_name}&message=${this.contact_message}`
+    //     const requestOptions = {
+    //       method: 'GET',
+    //       headers: { 'Content-Type': 'application/json' },
+    //     }
+    //     fetch(url, requestOptions)
+    //     this.show_contact = false
+    //   }
+    // },
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
+    handleSubmit() {
       this.$v.$touch()
+
       if (this.$v.$invalid) {
         return true
-      } else {
-        const url = `https://us-central1-my-portfolio-4d79e.cloudfunctions.net/sendEmail?email_from=${this.contact_email}&name=${this.contact_name}&message=${this.contact_message}`
-        const requestOptions = {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' },
-        }
-        fetch(url, requestOptions)
-        this.show_contact = false
       }
+
+      fetch('/', {
+        method: 'post',
+
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+
+        body: this.encode({
+          'form-name': 'contactForm',
+          ...this.form,
+        }),
+      })
+        // eslint-disable-next-line no-console
+        .then(() => {
+          this.show_contact = false
+          // eslint-disable-next-line no-console
+          console.log('Message Success')
+        })
+        // eslint-disable-next-line no-console
+        .catch((e) => console.error(e))
     },
   },
 }

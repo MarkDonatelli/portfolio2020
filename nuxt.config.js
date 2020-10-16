@@ -93,7 +93,5 @@ export default {
   build: {},
 
   publicRuntimeConfig: {},
-  privateRuntimeConfig: {
-    apiSecret: process.env.SENDGRID_API_KEY,
-  },
+  privateRuntimeConfig: {},
 }
