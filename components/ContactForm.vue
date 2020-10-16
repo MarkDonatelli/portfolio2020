@@ -156,6 +156,12 @@ export default {
       contact_name: '',
       contact_email: '',
       contact_message: '',
+
+      form: {
+        name: '',
+        email: '',
+        message: '',
+      },
     }
   },
   validations: {
@@ -172,20 +178,6 @@ export default {
     },
   },
   methods: {
-    // submitForm() {
-    //   this.$v.$touch()
-    //   if (this.$v.$invalid) {
-    //     return true
-    //   } else {
-    //     const url = `https://us-central1-my-portfolio-4d79e.cloudfunctions.net/sendEmail?email_from=${this.contact_email}&name=${this.contact_name}&message=${this.contact_message}`
-    //     const requestOptions = {
-    //       method: 'GET',
-    //       headers: { 'Content-Type': 'application/json' },
-    //     }
-    //     fetch(url, requestOptions)
-    //     this.show_contact = false
-    //   }
-    // },
     encode(data) {
       return Object.keys(data)
         .map(
