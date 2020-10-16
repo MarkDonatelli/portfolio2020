@@ -156,12 +156,6 @@ export default {
       contact_name: '',
       contact_email: '',
       contact_message: '',
-
-      form: {
-        name: '',
-        email: '',
-        message: '',
-      },
     }
   },
   validations: {
@@ -175,6 +169,15 @@ export default {
     contact_message: {
       required,
       minLength: minLength(10),
+    },
+  },
+  computed: {
+    form() {
+      return {
+        name: this.contact_name,
+        email: this.contact_email,
+        message: this.contact_message,
+      }
     },
   },
   methods: {
