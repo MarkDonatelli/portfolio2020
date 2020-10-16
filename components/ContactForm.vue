@@ -106,11 +106,7 @@
                   </div>
                   <!-- end user message -->
                 </div>
-                <button
-                  type="submit"
-                  class="btn btn-primary"
-                  @click="submitForm()"
-                >
+                <button type="submit" class="btn btn-primary">
                   Send Message
                   <font-awesome-icon far icon="arrow-right" />
                 </button>
