@@ -32,7 +32,7 @@
                 name="contactForm"
                 method="post"
                 netlify-honeypot="bot-field"
-                data-netlify="true"
+                netlify
                 @submit.prevent="handleSubmit()"
               >
                 <input type="hidden" name="form-name" value="contactForm" />
@@ -150,7 +150,7 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
 export default {
   data() {
     return {
-      title: 'Mark Donatelli Contact Form',
+      title: 'Contact Form',
       show_contact: true,
 
       contact_name: '',
