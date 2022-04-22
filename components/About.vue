@@ -24,7 +24,7 @@
           <div class="highlight-wrap">
             <h2>Experience</h2>
             <span>
-              3+ years of building production ready websites and applications
+              6+ years of building production ready websites and applications
             </span>
           </div>
         </div>
