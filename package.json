@@ -16,7 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "node-forge": "^0.10.0",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.8",
     "nuxt-gsap": "^0.1.4",
     "vue-parallaxy": "^1.1.1",
     "vue-scrollto": "^2.19.1",
