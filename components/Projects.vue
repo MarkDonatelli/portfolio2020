@@ -101,25 +101,25 @@
                 />
                 <div ref="animateUp" class="l-project project--animate">
                   <img
-                    src="../assets/img/be-vocal-collage.jpg"
+                    src="../assets/img/aptiom-collage.jpg"
                     class="img-responsive shadow"
                   />
                 </div>
               </div>
               <div class="grid-item project-content">
-                <h2 class="project-title">Be Vocal</h2>
+                <h2 class="project-title">Aptiom</h2>
                 <div class="project-details">
                   <h3>Role</h3>
                   <p>Front End Development</p>
                   <h3>Year</h3>
-                  <p>2019</p>
+                  <p>2020</p>
                   <h3>Client</h3>
                   <p>Sunovion Pharmaceuticals Inc</p>
                 </div>
                 <div class="visit-link">
                   <a
                     class="btn btn-primary"
-                    href="https://www.bevocalspeakup.com/"
+                    href="https://www.aptiom.com/"
                     target="blank"
                   >
                     Visit Site
